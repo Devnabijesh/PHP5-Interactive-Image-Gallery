@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>My Image Gallery</h2>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openLightbox(0)">
+            <img src="https://picsum.photos/id/10/400/300" alt="Nature 1">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+            <img src="https://picsum.photos/id/15/400/300" alt="Nature 2">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+            <img src="https://picsum.photos/id/28/400/300" alt="Nature 3">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+            <img src="https://picsum.photos/id/54/400/300" alt="Nature 4">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)">
+            <img src="https://picsum.photos/id/16/400/300" alt="Nature 5">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)">
+            <img src="https://picsum.photos/id/29/400/300" alt="Nature 6">
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="close-btn" onclick="closeLightbox()">Close</button>
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+            <div class="lightbox-controls">
+                <button onclick="changeImage(-1)">Previous</button>
+                <button onclick="changeImage(1)">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
